@@ -27,7 +27,7 @@ public class Department {
 
         Set<String> seen = new HashSet<>();
         for (Employee e : employeeList) {
-            String key = e.getEmployeeId() + "_" + e.getName();
+            String key = e.getEmployeeId() + "_" + e.getName() + "_" + e.getClass().getSimpleName();
             if (seen.add(key)) {
                 this.employeeList.add(e);
             }
